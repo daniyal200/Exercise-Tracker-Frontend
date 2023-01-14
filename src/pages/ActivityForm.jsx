@@ -14,9 +14,9 @@ return (
                 <Form.Control type="name" placeholder="Enter name" value={user.name} onChange={e => setUser({ name: e.target.value, description: user.description, activitytype: user.activitytype, duration: user.duration })} />
             </Form.Group>
 
-            <Form.Group className="mb-3" controlId="formBasicPassword">
-                <Form.Label>Password</Form.Label>
-                <Form.Control type="password" placeholder="Password" value={user.description} onChange={e => setUser({ name: user.name, description: e.target.value, activitytype: user.activitytype, duration: user.duration })} />
+            <Form.Group className="mb-3" controlId="formBasicDescription">
+                <Form.Label>Description</Form.Label>
+                <Form.Control type="description" placeholder="Description" value={user.description} onChange={e => setUser({ name: user.name, description: e.target.value, activitytype: user.activitytype, duration: user.duration })} />
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="formBasicActivity Type">
@@ -28,10 +28,11 @@ return (
                 <Form.Label>Duration</Form.Label>
                 <Form.Control type="duration" placeholder="Duration" value={user.duration} onChange={e => setUser({ name: user.name, description: user.description, activitytype: user.activitytype, duration: e.target.value })} />
             </Form.Group>
-        </Form>
-        <Button onClick={onSubmit} variant="primary" type="submit" >
+            <Button onClick={onSubmit} variant="primary" type="submit" >
                 Submit
             </Button>
+        </Form>
+        
     </div>
 )
 }

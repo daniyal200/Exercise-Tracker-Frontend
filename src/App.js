@@ -29,7 +29,7 @@ function App() {
     <div className="App">
      <Router>
         <Routes>
-          <Route exact path='/' element={<ActivityForm user={user} setUser={setUser} addUser={onSubmit} />}></Route>
+          <Route exact path='/' element={<ActivityForm user={user} setUser={setUser} onSubmit={onSubmit} />}></Route>
           <Route exact path='/dashboard' element={<Dasboard userList={userList}/>}></Route>
         </Routes>
       </Router>
